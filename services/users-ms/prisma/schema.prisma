@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+// After creating/updating a schema file, make sure to run these in the order:
+// 1. npx prisma migrate dev  -> Generates the migrations folder  (Needed)
+// 2. npx prisma generate     -> Generates the generated folder   (Only needed locally)
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id String @unique @id
+
+  name String
+  email String @unique
+  password String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

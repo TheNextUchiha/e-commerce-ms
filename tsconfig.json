@@ -1,10 +1,6 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    "rootDir": "./",
-    "outDir": "./dist",
-
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
@@ -17,7 +13,7 @@
 
     // Other Outputs
     "sourceMap": false,
-    "declaration": false,
+    "declaration": true,
     "declarationMap": false,
 
     // Stricter Typechecking Options
@@ -40,5 +36,12 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  "files": [], 
+  "references": [
+    { "path": "./api-gateway" },
+    // { "path": "./services/orders-ms" },
+    // { "path": "./services/products-ms" },
+    { "path": "./services/users-ms" }
+  ]
 }

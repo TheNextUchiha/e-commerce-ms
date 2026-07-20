@@ -1,4 +1,19 @@
+# Node modules
 node_modules/
 
+# Environment variables
 .env
 .env.*
+
+# Auto-generated Prisma clients across all microservices
+services/*/src/generated/
+api-gateway/src/generated/
+
+# Compiled prisma configs
+services/*/prisma.config.js
+
+# Compiled dist builds
+**/dist/
+
+# Ignore TypeScript build caches everywhere across the monorepo
+*.tsbuildinfo
